@@ -25,7 +25,7 @@ export default function Invitation() {
     <>
       <a className="invitation__skip" href="#celebration">Ir a la invitación</a>
       <header className="invitation__hero">
-        <img className="invitation__hero-image" src="/images/hero.png" alt="Valeria con su vestido color vino y su corona de XV años" fetchPriority="high" width="1599" height="899" />
+        <img className="invitation__hero-image" src="/images/hero.png" alt="Valeria con su vestido color rojo y su corona de XV años" fetchPriority="high" width="1599" height="899" />
         <nav className="invitation__nav" aria-label="Navegación principal">
           <a className="invitation__monogram" href="#">{event.initials}<span>· XV ·</span></a>
           <div className="invitation__nav-links">
@@ -77,12 +77,13 @@ export default function Invitation() {
           {event.photos.map(photo => <img className="invitation__gallery-image" key={photo.src} src={photo.src} alt={photo.alt} width="800" height="800" loading="lazy" />)}
         </div>
 
-        <InvitationSection id="date" eyebrow="Hay momentos que se guardan para siempre" title="Save the date" tone="wine">
+        <InvitationSection id="date" eyebrow="Hay momentos que se guardan para siempre" title="Save the date" tone="paper" background="paper">
           <div className="invitation__save-date">
             <span className="invitation__date-side">{dateLabels.weekday}</span>
-            <div className="invitation__seal"><span>{dateLabels.month.slice(0, 3)}</span><strong>{dateLabels.day}</strong><span>{dateLabels.year}</span></div>
+            <div className="invitation__seal"><span className="invitation__seal-month">{dateLabels.month}</span><strong>{dateLabels.day}</strong><span>{dateLabels.year}</span></div>
             <span className="invitation__date-side">{dateLabels.time}</span>
           </div>
+          <img src="./images/vestido.png" className="invitation__dress-image" alt="Detalles del lugar de la celebración" loading="lazy" />
           <p className="invitation__countdown-label">Cada vez falta menos</p>
           <Countdown date={event.date} />
           <button className="button" type="button" onClick={downloadCalendar}><CalendarPlus size={16} aria-hidden="true" />Guardar en mi calendario</button>
@@ -92,7 +93,7 @@ export default function Invitation() {
           <div className="invitation__locations">{event.locations.map(location => <EventLocation key={location.id} location={location} />)}</div>
         </InvitationSection>
 
-        <div className="invitation__photo-band"><img src="/images/venue.jpg" alt="Detalles del lugar de la celebración" width="800" height="533" loading="lazy" /></div>
+        <div className="invitation__photo-band"><img src="./images/venue.jpg" alt="Detalles del lugar de la celebración" width="800" height="533" loading="lazy" /></div>
 
         <InvitationSection id="schedule" eyebrow="Cada instante será especial" title="Itinerario" tone="wine">
           <ol className="invitation__schedule">
@@ -107,8 +108,10 @@ export default function Invitation() {
           </ol>
         </InvitationSection>
 
-        <InvitationSection id="dress-code" eyebrow="Tu compañía es lo más importante" title="Dress code">
-          <img src="/images/dress-code.png" alt="Dress code" className="invitation__dress-image" />
+        ff
+
+        <InvitationSection id="dress-code" eyebrow="Tu compañía es lo más importante" title="Dress code" background = 'paper'>
+          <img src="./images/dress-code.png" alt="Dress code" className="invitation__dress-image" />
           <p className="invitation__dress-title">Formal sin tenis</p>
           {/* <p className="invitation__body">Te invitamos a vestir como te sientas más cómodo y disfrutar de la celebración con nosotros.</p> */}
           <div className="invitation__reserved"><span className="invitation__swatch" aria-hidden="true" /><p>El color vino está reservado<br />para la quinceañera.</p></div>

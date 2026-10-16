@@ -2,7 +2,7 @@ export const invitationData = {
   name: 'Valeria',
   initials: 'MJ',
   date: '2027-01-16T15:30:00-06:00',
-  endDate: '2027-01-16T02:00:00-06:00',
+  endDate: '2027-01-17T02:00:00-06:00',
   timeZone: 'America/Mexico_City',
   confirmationDeadline: '1 de noviembre',
   message: 'Doy gracias a Dios por estos XV años y por tener a personas como ustedes en mi camino.',
@@ -12,7 +12,7 @@ export const invitationData = {
   whatsappNumber: '',
   photos: [
     { src: '/images/portrait-one.jpg', alt: 'Valeria con su vestido de XV años' },
-    { src: '/images/portrait-three.jpg', alt: 'Retrato de Valeria con su vestido color vino' },
+    { src: '/images/portrait-three.jpg', alt: 'Retrato de Valeria con su vestido color rojo' },
     { src: '/images/portrait-two.jpg', alt: 'Valeria en su sesión de fotografías' },
   ],
   locations: [
@@ -21,7 +21,7 @@ export const invitationData = {
       title: 'Ceremonia',
       name: 'Iglesia parroquia de nuestra señora de La Paz',
       address: 'Río Amacuzac 23, Paseos de Churubusco, Iztapalapa, 09030 Ciudad de México, CDMX',
-      time: '2:00 p. m.',
+      time: '3:30 p. m.',
       dateTime: '2027-01-16T15:30:00-06:00',
       mapUrl: 'https://maps.app.goo.gl/QXmXZ1Fz6UmD7KZY9?g_st=ic',
     },
@@ -36,11 +36,10 @@ export const invitationData = {
     },
   ],
   schedule: [
-    { id: 'ceremony', label: 'Ceremonia', time: '2:00 p. m.', icon: 'church' },
-    { id: 'reception', label: 'Recepción', time: '5:00 p. m.', icon: 'glass' },
-    { id: 'mariachi', label: 'Mariachi', time: '5:15 p. m.', icon: 'music' },
-    { id: 'dinner', label: 'Banquete', time: '6:00 p. m.', icon: 'dinner' },
-    { id: 'waltz', label: 'Vals', time: '7:00 p. m.', icon: 'heart' },
-    { id: 'dance', label: 'Baile', time: '8:00 p. m.', icon: 'dance' },
+    { id: 'ceremony', label: 'Ceremonia', time: '3:30 p. m.', icon: 'church' },
+    { id: 'reception', label: 'Recepción', time: '5:30 p. m.', icon: 'glass' },
+    { id: 'dinner', label: 'Banquete', time: '7:00 p. m.', icon: 'dinner' },
+    { id: 'waltz', label: 'Vals', time: '9:00 p. m.', icon: 'heart' },
+    { id: 'dance', label: 'Baile', time: '10:00 p. m.', icon: 'dance' },
   ],
 }

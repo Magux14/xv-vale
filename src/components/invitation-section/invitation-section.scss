@@ -1,4 +1,5 @@
 .invitation-section {
+  position: relative;
   padding: 88px 24px;
   text-align: center;
 
@@ -12,6 +13,7 @@
   &__divider { display: flex; align-items: center; gap: 14px; width: 160px; height: 24px; margin: 20px auto 0; color: var(--gold-dark); }
   &__divider::before, &__divider::after { content: ''; flex: 1; border-top: 1px solid var(--gold); }
   &--wine &__divider { color: var(--gold); }
+  &__flowers-separator {position: absolute; margin-left: -20px; margin-top: 10px; z-index: 1; width: 100vw;}
 }
 
 @media (max-width: 600px) {

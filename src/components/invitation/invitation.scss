@@ -106,6 +106,7 @@
     &__gallery-image:first-child { grid-column: 1 / -1; height: 300px; }
     &__save-date { gap: 12px; }
     &__seal { width: 150px; height: 150px; }
+    &__seal-month { position: absolute; padding-top: 30px; }
     &__seal strong { font-size: 55px; }
     &__seal span { font-size: 14px; }
     &__date-side { min-width: 65px; font-size: 17px; }
@@ -118,6 +119,7 @@
     &__closing { min-height: 590px; }
     &__closing-title { font-size: 65px; }
     &__closing-text { max-width: 270px; margin-inline: auto; font-size: 22px; }
+    &__dress-image {max-height: 200px;}
   }
 }
 
