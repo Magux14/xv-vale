@@ -11,9 +11,9 @@ export const invitationData = {
   music: { src: '', title: 'Mi canción' },
   whatsappNumber: '',
   photos: [
-    { src: '/images/portrait-one.jpg', alt: 'Valeria con su vestido de XV años' },
-    { src: '/images/portrait-three.jpg', alt: 'Retrato de Valeria con su vestido color rojo' },
-    { src: '/images/portrait-two.jpg', alt: 'Valeria en su sesión de fotografías' },
+    { src: './images/portrait-one.jpg', alt: 'Valeria con su vestido de XV años' },
+    { src: './images/portrait-three.jpg', alt: 'Retrato de Valeria con su vestido color rojo' },
+    { src: './images/portrait-two.jpg', alt: 'Valeria en su sesión de fotografías' },
   ],
   locations: [
     {
