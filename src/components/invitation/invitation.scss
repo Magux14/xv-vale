@@ -38,7 +38,7 @@
   &__gallery-image { width: 100%; height: 420px; object-fit: cover; }
   &__gallery-image:nth-child(2) { object-position: center 30%; }
   &__save-date { display: flex; align-items: center; justify-content: center; gap: 32px; margin: -10px 0 30px; }
-  &__seal { display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; width: 190px; height: 190px; background: url('./images/date-background.png') center / contain no-repeat; color: #4c2309; transform: rotate(-7deg); }
+  &__seal { display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; width: 190px; height: 190px; background: url('../images/date-background.png') center / contain no-repeat; color: #4c2309; transform: rotate(-7deg); }
   &__seal span { font: 600 17px var(--serif); text-transform: uppercase; }
   &__seal strong { font: 600 72px/.95 var(--serif); }
   &__date-side { min-width: 110px; border-block: 1px solid #d4b07870; padding: 12px 0; font: 22px var(--serif); }
