@@ -44,7 +44,7 @@ export default function Invitation() {
       </header>
 
       <main>
-        <section className="invitation__intro" id="celebration" aria-label="Un día muy especial">
+        {/* <section className="invitation__intro" id="celebration" aria-label="Un día muy especial">
           <img className="invitation__branch invitation__branch--left" src="./images/floral-branch.png" alt="" width="439" height="800" loading="lazy" />
           <img className="invitation__branch invitation__branch--right" src="./images/floral-branch.png" alt="" width="439" height="800" loading="lazy" />
           <p className="invitation__eyebrow">Una nueva etapa, un sueño, una celebración</p>
@@ -52,16 +52,28 @@ export default function Invitation() {
           <p className="invitation__quote">{event.message}</p>
           <div className="invitation__divider" aria-hidden="true"><Crown size={18} strokeWidth={1} /></div>
           <MusicPlayer {...event.music} />
-        </section>
+        </section> */}
 
-        <InvitationSection id="family" eyebrow="Con el amor y la bendición de" title="Mi familia">
+        <InvitationSection id="date" eyebrow="Hay momentos que se guardan para siempre" title="Save the date" tone="paper" background="paper">
+          <div className="invitation__save-date">
+            <span className="invitation__date-side">{dateLabels.weekday}</span>
+            <div className="invitation__seal"><span className="invitation__seal-month">{dateLabels.month}</span><strong>{dateLabels.day}</strong><span>{dateLabels.year}</span></div>
+            <span className="invitation__date-side">{dateLabels.time}</span>
+          </div>
+          <img src="./images/vestido.png" className="invitation__dress-image" alt="Detalles del lugar de la celebración" loading="lazy" />
+          <p className="invitation__countdown-label">Cada vez falta menos</p>
+          <Countdown date={event.date} />
+          <button className="button" type="button" onClick={downloadCalendar}><CalendarPlus size={16} aria-hidden="true" />Guardar en mi calendario</button>
+        </InvitationSection>
+
+        <InvitationSection id="family" eyebrow="Con el amor y la bendición de" title="Mi familia" tone="wine">
           <div className="invitation__family">
             {[['Mis padres', event.parents], ['Mi madrina', event.godparents]].map(([title, names]) => (
               <div className="invitation__family-group" key={title}>
                 <p className="invitation__family-label">{title}</p>
                 <p className="invitation__family-name">{names[0]}</p>
                 {
-                  names[1] && 
+                  names[1] &&
                   <>
                     <span className="invitation__ampersand">&</span>
                     <p className="invitation__family-name">{names[1]}</p>
@@ -77,23 +89,12 @@ export default function Invitation() {
           {event.photos.map(photo => <img className="invitation__gallery-image" key={photo.src} src={photo.src} alt={photo.alt} width="800" height="800" loading="lazy" />)}
         </div>
 
-        <InvitationSection id="date" eyebrow="Hay momentos que se guardan para siempre" title="Save the date" tone="paper" background="paper">
-          <div className="invitation__save-date">
-            <span className="invitation__date-side">{dateLabels.weekday}</span>
-            <div className="invitation__seal"><span className="invitation__seal-month">{dateLabels.month}</span><strong>{dateLabels.day}</strong><span>{dateLabels.year}</span></div>
-            <span className="invitation__date-side">{dateLabels.time}</span>
-          </div>
-          <img src="./images/vestido.png" className="invitation__dress-image" alt="Detalles del lugar de la celebración" loading="lazy" />
-          <p className="invitation__countdown-label">Cada vez falta menos</p>
-          <Countdown date={event.date} />
-          <button className="button" type="button" onClick={downloadCalendar}><CalendarPlus size={16} aria-hidden="true" />Guardar en mi calendario</button>
-        </InvitationSection>
-
-        <InvitationSection id="locations" eyebrow="El escenario de un día inolvidable" title="Nos vemos en…">
-          <div className="invitation__locations">{event.locations.map(location => <EventLocation key={location.id} location={location} />)}</div>
-        </InvitationSection>
 
         <div className="invitation__photo-band"><img src="./images/venue.jpg" alt="Detalles del lugar de la celebración" width="800" height="533" loading="lazy" /></div>
+
+        <InvitationSection id="locations" eyebrow="El escenario de un día inolvidable" title="Nos vemos en…" background="paper">
+          <div className="invitation__locations">{event.locations.map(location => <EventLocation key={location.id} location={location} />)}</div>
+        </InvitationSection>
 
         <InvitationSection id="schedule" eyebrow="Cada instante será especial" title="Itinerario" tone="wine">
           <ol className="invitation__schedule">
@@ -108,14 +109,25 @@ export default function Invitation() {
           </ol>
         </InvitationSection>
 
-        ff
 
-        <InvitationSection id="dress-code" eyebrow="Tu compañía es lo más importante" title="Dress code" background = 'paper'>
+
+        <InvitationSection id="dress-code" eyebrow="Tu compañía es lo más importante" title="Dress code" background='paper'>
           <img src="./images/dress-code.png" alt="Dress code" className="invitation__dress-image" />
           <p className="invitation__dress-title">Formal sin tenis</p>
           {/* <p className="invitation__body">Te invitamos a vestir como te sientas más cómodo y disfrutar de la celebración con nosotros.</p> */}
-          <div className="invitation__reserved"><span className="invitation__swatch" aria-hidden="true" /><p>El color vino está reservado<br />para la quinceañera.</p></div>
+          <div className="invitation__reserved"><span className="invitation__swatch" aria-hidden="true" /><p>El color rojo está reservado<br />para la quinceañera.</p></div>
         </InvitationSection>
+
+        <InvitationSection id="gifts" eyebrow="El regalo más valioso para nosotros es tu presencia, pero si deseas obsequiarnos algo, te compartimos algunas opciones que recibiremos con cariño:" title="Mesa de Regalos" background='paper' tone="wine">
+          <div className="invitation__gift-buttons-container">
+            <button className="invitation__gift-button">Sears</button>
+            <button className="invitation__gift-button">Liverpool</button>
+            <button className="invitation__gift-button">Bodega Aurrerá</button>
+            <button className="invitation__gift-button">Oxxo</button>
+            <button className="invitation__gift-button">Tiendas 3B</button>
+          </div>
+        </InvitationSection>
+
 
         <section className="invitation__closing" id="rsvp" aria-labelledby="rsvp-heading">
           <img className="invitation__closing-image" src="./images/closing-portrait.jpg" alt="Valeria en su sesión de XV años" loading="lazy" width="533" height="800" />
