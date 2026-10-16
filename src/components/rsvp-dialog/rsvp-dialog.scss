@@ -1,0 +1,11 @@
+.rsvp-dialog {
+  &__deadline { margin-top: 18px; font: italic 20px var(--serif); }
+  &__modal { width: min(440px, calc(100% - 32px)); max-height: calc(100svh - 40px); padding: 40px 28px 32px; border: 1px solid var(--gold); border-radius: 4px; background: var(--paper); color: #4c282b; text-align: left; }
+  &__modal::backdrop { background: rgb(26 3 5 / 75%); backdrop-filter: blur(5px); }
+  &__close { position: absolute; top: 8px; right: 8px; display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: transparent; color: var(--wine); }
+  &__heart { margin: 0 auto 16px; color: var(--gold-dark); }
+  &__title { margin-bottom: 28px; font: 42px var(--script); text-align: center; color: var(--wine); }
+  &__form { display: grid; gap: 22px; }
+  &__field { display: grid; gap: 10px; font-size: 11px; line-height: 1.7; }
+  &__field input, &__field select { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid #c9b8a2; border-radius: 2px; background: transparent; color: #4c282b; font-size: 16px; }
+}

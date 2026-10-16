@@ -1,0 +1,13 @@
+.music-player {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 36px;
+  color: var(--gold-dark);
+
+  &__title { font: italic 24px var(--serif); }
+  &__button { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid currentColor; border-radius: 50%; background: transparent; }
+  &__error { flex-basis: 100%; font-size: 11px; }
+}

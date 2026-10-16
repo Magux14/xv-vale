@@ -1,0 +1,18 @@
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 480px;
+  margin: 24px auto 36px;
+
+  &__unit { position: relative; display: grid; gap: 8px; }
+  &__unit + &__unit::before { position: absolute; top: 4px; left: 0; content: ':'; font: 36px var(--serif); opacity: .55; }
+  &__number { font: 500 58px/1 var(--serif); font-variant-numeric: tabular-nums; }
+  &__label { font-size: 9px; text-transform: uppercase; }
+}
+
+@media (max-width: 600px) {
+  .countdown {
+    &__number { font-size: 43px; }
+    &__label { font-size: 8px; }
+  }
+}
