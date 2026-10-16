@@ -25,7 +25,7 @@ export default function Invitation() {
     <>
       <a className="invitation__skip" href="#celebration">Ir a la invitación</a>
       <header className="invitation__hero">
-        <img className="invitation__hero-image" src="/images/hero.png" alt="Valeria con su vestido color rojo y su corona de XV años" fetchPriority="high" width="1599" height="899" />
+        <img className="invitation__hero-image" src="./images/hero.png" alt="Valeria con su vestido color rojo y su corona de XV años" fetchPriority="high" width="1599" height="899" />
         <nav className="invitation__nav" aria-label="Navegación principal">
           <a className="invitation__monogram" href="#">{event.initials}<span>· XV ·</span></a>
           <div className="invitation__nav-links">
@@ -45,8 +45,8 @@ export default function Invitation() {
 
       <main>
         <section className="invitation__intro" id="celebration" aria-label="Un día muy especial">
-          <img className="invitation__branch invitation__branch--left" src="/images/floral-branch.png" alt="" width="439" height="800" loading="lazy" />
-          <img className="invitation__branch invitation__branch--right" src="/images/floral-branch.png" alt="" width="439" height="800" loading="lazy" />
+          <img className="invitation__branch invitation__branch--left" src="./images/floral-branch.png" alt="" width="439" height="800" loading="lazy" />
+          <img className="invitation__branch invitation__branch--right" src="./images/floral-branch.png" alt="" width="439" height="800" loading="lazy" />
           <p className="invitation__eyebrow">Una nueva etapa, un sueño, una celebración</p>
           <div className="invitation__date-line"><span>{dateLabels.month}</span><strong>{dateLabels.day}</strong><span>{dateLabels.year}</span></div>
           <p className="invitation__quote">{event.message}</p>
@@ -118,7 +118,7 @@ export default function Invitation() {
         </InvitationSection>
 
         <section className="invitation__closing" id="rsvp" aria-labelledby="rsvp-heading">
-          <img className="invitation__closing-image" src="/images/closing-portrait.jpg" alt="Valeria en su sesión de XV años" loading="lazy" width="533" height="800" />
+          <img className="invitation__closing-image" src="./images/closing-portrait.jpg" alt="Valeria en su sesión de XV años" loading="lazy" width="533" height="800" />
           <div className="invitation__closing-content">
             <Sparkles size={28} strokeWidth={1} aria-hidden="true" />
             <p className="invitation__eyebrow">Los mejores recuerdos se viven juntos</p>
