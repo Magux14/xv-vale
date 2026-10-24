@@ -4,7 +4,12 @@ import './styles/global.scss'
 import Invitation from './components/invitation/invitation.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Invitation />
-  </StrictMode>,
+
+  <div className="global-container">
+    <StrictMode>
+      <div className="global-container__content">
+        <Invitation />
+      </div>
+    </StrictMode>,
+  </div>
 )

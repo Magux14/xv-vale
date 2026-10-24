@@ -3,23 +3,83 @@
   padding: 88px 24px;
   text-align: center;
 
-  &--paper { background: var(--paper); }
-  &--wine { background: var(--wine); color: var(--gold); }
-  &__inner { max-width: 980px; margin: 0 auto; }
-  &__header { margin-bottom: 40px; }
-  &__eyebrow { margin-bottom: 16px; font-size: 10px; text-transform: uppercase; line-height: 1.8; }
-  &__title { color: var(--wine); font: 400 66px/1.2 var(--script); }
-  &--wine &__title { color: var(--gold); }
-  &__divider { display: flex; align-items: center; gap: 14px; width: 160px; height: 24px; margin: 20px auto 0; color: var(--gold-dark); }
-  &__divider::before, &__divider::after { content: ''; flex: 1; border-top: 1px solid var(--gold); }
-  &--wine &__divider { color: var(--gold); }
-  &__flowers-separator {position: absolute; margin-left: -20px; margin-top: 10px; z-index: 1; width: 100vw;}
+  &--paper {
+    background: var(--paper);
+  }
+
+  &--wine {
+    background: var(--wine);
+    color: var(--gold);
+  }
+
+  &__inner {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__eyebrow {
+    margin-bottom: 16px;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 1.8;
+  }
+
+  &__title {
+    color: var(--wine);
+    font: 400 66px/1.2 var(--script);
+  }
+
+  &--wine &__title {
+    color: var(--gold);
+  }
+
+  &__divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 160px;
+    height: 24px;
+    margin: 20px auto 0;
+    color: var(--gold-dark);
+  }
+
+  &__divider::before,
+  &__divider::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid var(--gold);
+  }
+
+  &--wine &__divider {
+    color: var(--gold);
+  }
+
+  &__flowers-separator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 10px;
+    z-index: 1;
+    width: 100vw;
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 600px) {
   .invitation-section {
     padding: 64px 24px;
-    &__title { font-size: 52px; }
-    &__header { margin-bottom: 32px; }
+
+    &__title {
+      font-size: 52px;
+    }
+
+    &__header {
+      margin-bottom: 32px;
+    }
   }
 }

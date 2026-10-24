@@ -24,7 +24,7 @@ export default function Invitation() {
   return (
     <>
       <a className="invitation__skip" href="#celebration">Ir a la invitación</a>
-      <header className="invitation__hero">
+      <header className="invitation__hero" style={{ background: '#AD0008' }}>
         <img className="invitation__hero-image" src="./images/hero.png" alt="Valeria con su vestido color rojo y su corona de XV años" fetchPriority="high" width="1599" height="899" />
         <nav className="invitation__nav" aria-label="Navegación principal">
           <a className="invitation__monogram" href="#">{event.initials}<span>· XV ·</span></a>
@@ -70,7 +70,7 @@ export default function Invitation() {
           <div className="invitation__family">
             {[['Mis padres', event.parents], ['Mi madrina', event.godparents]].map(([title, names]) => (
               <div className="invitation__family-group" key={title}>
-                <p className="invitation__family-label">{title}</p>
+                <strong className="invitation__family-label">{title}</strong>
                 <p className="invitation__family-name">{names[0]}</p>
                 {
                   names[1] &&
