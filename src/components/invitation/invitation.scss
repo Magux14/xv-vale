@@ -496,7 +496,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1900px) {
   .invitation {
     &__nav {
       padding: 24px;
@@ -638,7 +638,7 @@
     }
 
     &__photo-band {
-      height: 230px;
+      height: 250px;
     }
 
     &__schedule {
@@ -674,7 +674,7 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 1900px) {
   .invitation {
     &__name {
       font-size: 54px;
