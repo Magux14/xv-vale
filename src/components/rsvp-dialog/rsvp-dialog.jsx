@@ -38,9 +38,9 @@ export default function RsvpDialog({ phoneNumber, deadline }) {
               <option value="no">No podré asistir</option>
             </select>
           </label>
-          {attendance === 'yes' && <label className="rsvp-dialog__field">Personas que asistirán, incluyéndote
+          {/* {attendance === 'yes' && <label className="rsvp-dialog__field">Personas que asistirán, incluyéndote
             <input type="number" min="1" max="10" step="1" value={guests} onChange={event => setGuests(event.target.value)} required />
-          </label>}
+          </label>} */}
           <button className="button button--wine" type="submit">
             <MessageCircle size={17} aria-hidden="true" />Enviar por WhatsApp
           </button>

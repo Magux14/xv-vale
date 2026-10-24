@@ -4,12 +4,12 @@ export const invitationData = {
   date: '2027-01-16T15:30:00-06:00',
   endDate: '2027-01-17T02:00:00-06:00',
   timeZone: 'America/Mexico_City',
-  confirmationDeadline: '1 de noviembre',
+  confirmationDeadline: '1 de diciembre del 2026',
   message: 'Doy gracias a Dios por estos XV años y por tener a personas como ustedes en mi camino.',
   parents: ['Rodrigo Arellano Nava', 'María Fernanda Vivar Hernández'],
   godparents: ['Mariana Hernández Estrada'],
   music: { src: '', title: 'Mi canción' },
-  whatsappNumber: '',
+  whatsappNumber: '5545752937',
   photos: [
     { src: './images/portrait-one.jpg', alt: 'Valeria con su vestido de XV años' },
     { src: './images/portrait-three.jpg', alt: 'Retrato de Valeria con su vestido color rojo' },
@@ -23,7 +23,7 @@ export const invitationData = {
       address: 'Río Amacuzac 23, Paseos de Churubusco, Iztapalapa, 09030 Ciudad de México, CDMX',
       time: '3:30 p. m.',
       dateTime: '2027-01-16T15:30:00-06:00',
-      mapUrl: 'https://maps.app.goo.gl/QXmXZ1Fz6UmD7KZY9?g_st=ic',
+      mapUrl: 'https://maps.app.goo.gl/QXmXZ1Fz6UmD7KZY9',
     },
     {
       id: 'reception',
@@ -32,7 +32,7 @@ export const invitationData = {
       address: 'C. San Pablo 3, El Santuario, Iztapalapa, 09836 Ciudad de México, CDMX',
       time: '5:30 p. m.',
       dateTime: '2027-01-19T17:30:00-06:00',
-      mapUrl: 'https://maps.app.goo.gl/Q5rpTrgGoP6WrTxD9?g_st=ic',
+      mapUrl: 'https://maps.app.goo.gl/Q5rpTrgGoP6WrTxD9',
     },
   ],
   schedule: [

@@ -55,7 +55,7 @@ export function createCalendarEvent(event) {
 
 export function getConfirmationUrl({ name, attendance, guests }, phoneNumber) {
   const message = attendance === 'yes'
-    ? `¡Hola! Soy ${name.trim()}. Confirmo mi asistencia a tus XV años. Asistiremos ${guests} persona(s).`
+    ? `¡Hola! Soy ${name.trim()}. Confirmo mi asistencia a tus XV años.`
     : `¡Hola! Soy ${name.trim()}. Muchas gracias por invitarme a tus XV años. No podré asistir.`
 
   return `https://wa.me/${phoneNumber.replaceAll(/\D/g, '')}?text=${encodeURIComponent(message)}`

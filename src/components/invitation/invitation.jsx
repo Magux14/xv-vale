@@ -27,7 +27,7 @@ export default function Invitation() {
       <header className="invitation__hero" style={{ background: '#AD0008' }}>
         <img className="invitation__hero-image" src="./images/hero.png" alt="Valeria con su vestido color rojo y su corona de XV años" fetchPriority="high" width="1599" height="899" />
         <nav className="invitation__nav" aria-label="Navegación principal">
-          <a className="invitation__monogram" href="#">{event.initials}<span>· XV ·</span></a>
+          {/* <a className="invitation__monogram" href="#">{event.initials}<span>· XV ·</span></a> */}
           <div className="invitation__nav-links">
             <a href="#date">La fecha</a>
             <a href="#locations">El lugar</a>
@@ -98,12 +98,18 @@ export default function Invitation() {
 
         <InvitationSection id="schedule" eyebrow="Cada instante será especial" title="Itinerario" tone="wine">
           <ol className="invitation__schedule">
-            {event.schedule.map(item => {
+            {event.schedule.map((item, index) => {
               const Icon = scheduleIcons[item.icon]
               return <li className="invitation__schedule-item" key={item.id}>
                 <span className="invitation__schedule-icon"><Icon size={28} strokeWidth={1} aria-hidden="true" /></span>
                 <p className="invitation__schedule-name">{item.label}</p>
                 <p className="invitation__schedule-time">{item.time}</p>
+                {
+                  index != event.schedule.length - 1 &&
+                  <div className="invitation__schedule-gap">
+                    |
+                  </div>
+                }
               </li>
             })}
           </ol>
@@ -118,7 +124,7 @@ export default function Invitation() {
           <div className="invitation__reserved"><span className="invitation__swatch" aria-hidden="true" /><p>El color rojo está reservado<br />para la quinceañera.</p></div>
         </InvitationSection>
 
-        <InvitationSection id="gifts" eyebrow="El regalo más valioso para nosotros es tu presencia, pero si deseas obsequiarnos algo, te compartimos algunas opciones que recibiremos con cariño:" title="Mesa de Regalos" background='paper' tone="wine">
+        <InvitationSection id="gifts" eyebrow="El regalo más valioso para mi es tu presencia, pero si deseas obsequiarme algo, te comparto algunas opciones que recibiré con cariño" title="Mesa de Regalos" background='paper' tone="wine">
           <div className="invitation__gift-buttons-container">
             <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/60063669" target="_blank" rel="noreferrer noopener">
               <button className="invitation__gift-button">Liverpool</button>
