@@ -15,7 +15,7 @@ function downloadCalendar() {
   const url = URL.createObjectURL(new Blob([createCalendarEvent(event)], { type: 'text/calendar;charset=utf-8' }))
   const link = document.createElement('a')
   link.href = url
-  link.download = 'mis-xv-maria-jose.ics'
+  link.download = 'mis-xv-vale-arellano.ics'
   link.click()
   setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
