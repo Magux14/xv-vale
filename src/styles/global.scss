@@ -14,10 +14,6 @@
   --script: 'Great Vibes', cursive;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 24px;
@@ -30,6 +26,10 @@ html {
 
   &__content {
     max-width: 550px;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 }
 

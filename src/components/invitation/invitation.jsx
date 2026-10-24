@@ -55,7 +55,7 @@ export default function Invitation() {
         </section> */}
 
         <InvitationSection id="date" eyebrow="Hay momentos que se guardan para siempre" title="Save the date" tone="paper" background="paper">
-          <div className="invitation__save-date">
+          <div className="invitation__save-date" style={{ paddingLeft: 0, paddingRight: 0 }}>
             <span className="invitation__date-side">{dateLabels.weekday}</span>
             <div className="invitation__seal"><span className="invitation__seal-month">{dateLabels.month}</span><strong>{dateLabels.day}</strong><span>{dateLabels.year}</span></div>
             <span className="invitation__date-side">{dateLabels.time}</span>

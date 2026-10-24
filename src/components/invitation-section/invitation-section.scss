@@ -1,6 +1,6 @@
 .invitation-section {
   position: relative;
-  padding: 88px 24px;
+  padding: 48px 24px;
   text-align: center;
 
   &--paper {
@@ -63,7 +63,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    margin-top: 10px;
+    margin-top: -14px;
     z-index: 1;
     width: 100vw;
     max-width: 400px;
@@ -72,7 +72,7 @@
 
 @media (max-width: 600px) {
   .invitation-section {
-    padding: 64px 24px;
+    padding: 34px 10px;
 
     &__title {
       font-size: 52px;
