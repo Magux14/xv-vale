@@ -120,11 +120,9 @@ export default function Invitation() {
 
         <InvitationSection id="gifts" eyebrow="El regalo más valioso para nosotros es tu presencia, pero si deseas obsequiarnos algo, te compartimos algunas opciones que recibiremos con cariño:" title="Mesa de Regalos" background='paper' tone="wine">
           <div className="invitation__gift-buttons-container">
-            <button className="invitation__gift-button">Sears</button>
-            <button className="invitation__gift-button">Liverpool</button>
-            <button className="invitation__gift-button">Bodega Aurrerá</button>
-            <button className="invitation__gift-button">Oxxo</button>
-            <button className="invitation__gift-button">Tiendas 3B</button>
+            <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/60063669" target="_blank" rel="noreferrer noopener">
+              <button className="invitation__gift-button">Liverpool</button>
+            </a>
           </div>
         </InvitationSection>
 
