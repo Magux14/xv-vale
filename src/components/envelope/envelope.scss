@@ -24,6 +24,11 @@
     height: 65vw;
     cursor: pointer;
     perspective: 800px;
+
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   &__base {
@@ -83,17 +88,19 @@
   &__env-image {
     max-width: 300px;
     max-height: auto;
-    -webkit-tap-highlight-color: transparent !important;
+    -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     user-select: none;
-    -webkit-user-drag: none;
-    outline: none;
+    pointer-events: none;
 
     &:focus,
     &:active {
-      outline: none;
       -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+      pointer-events: none;
     }
   }
 
