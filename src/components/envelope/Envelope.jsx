@@ -43,13 +43,14 @@ export const Envelope = ({ setCanScroll, hasSound }) => {
         try {
           // Safari solo respeta el volumen/mute si se hace dentro del mismo click
           audioBackgroundRef.current.muted = !hasSound;
-          audioBackgroundRef.current.volume = hasSound ? 0.2 : 0;
+          audioBackgroundRef.current.volume = hasSound ? 0.5 : 0;
+          audioBackgroundRef.current.loop = true;
           await audioBackgroundRef.current.play();
         } catch (e) {
           console.log('No se pudo reproducir el audio de fondo:', e);
         }
       }
-    }, 1000);
+    }, 100);
 
     setTimeout(() => setHidden(true), 2000);
   };
