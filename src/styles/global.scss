@@ -40,6 +40,13 @@ html {
   }
 }
 
+.not-selectable,
+.not-selectable * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
 .not-scroll {
   overflow: hidden;
   touch-action: none;

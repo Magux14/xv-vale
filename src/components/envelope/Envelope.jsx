@@ -73,7 +73,7 @@ export const Envelope = ({ setCanScroll, hasSound }) => {
       className={`envelope envelope__overlay ${opened ? 'envelope__overlay--fade envelope--opened' : ''}`}
       onClick={handleClick}
     >
-      <div className="envelope__relative-container">
+      <div className="envelope__relative-container not-selectable">
         <div className={`envelope__container ${opened ? 'envelope--opened' : ''}`}>
 
           {
