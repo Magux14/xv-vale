@@ -83,9 +83,18 @@
   &__env-image {
     max-width: 300px;
     max-height: auto;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent !important;
     -webkit-touch-callout: none;
+    -webkit-user-select: none;
     user-select: none;
+    -webkit-user-drag: none;
+    outline: none;
+
+    &:focus,
+    &:active {
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
   }
 
   &__env-image--opened {
