@@ -25,10 +25,13 @@
     cursor: pointer;
     perspective: 800px;
 
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
+    * {
+      -webkit-tap-highlight-color: transparent !important;
+      -webkit-user-select: none !important;
+      user-select: none !important;
+      -webkit-touch-callout: none;
+      outline: none;
+    }
   }
 
   &__base {
@@ -88,20 +91,7 @@
   &__env-image {
     max-width: 300px;
     max-height: auto;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
-    pointer-events: none;
-
-    &:focus,
-    &:active {
-      -webkit-tap-highlight-color: transparent;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      user-select: none;
-      pointer-events: none;
-    }
+    -webkit-user-drag: none;
   }
 
   &__env-image--opened {
