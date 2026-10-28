@@ -33,6 +33,12 @@ html {
   }
 }
 
+.not-scroll {
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
 body {
   margin: 0;
   min-width: 320px;

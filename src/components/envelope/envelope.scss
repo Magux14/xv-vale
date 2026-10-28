@@ -1,0 +1,90 @@
+.envelope {
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease;
+
+    &--fade {
+      opacity: 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80vw;
+    height: 65vw;
+    cursor: pointer;
+    perspective: 800px;
+  }
+
+  &__base {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #c0e7d5, #b0dbc7);
+    border: 2px solid #ccc;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Solapa triangular */
+  &__flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 40vw solid transparent; /* mitad del ancho */
+    border-right: 40vw solid transparent;
+    border-top: 80px solid #fff;
+    border-top-color: #dcfded;
+    border-top-width: 30vw;
+    transform-origin: top center;
+    transition: transform 1.2s ease;
+    z-index: 2;
+  }
+
+  &__seal {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42px;
+    height: 42px;
+    background: radial-gradient(circle at 30% 30%, #005540, #0c2c06 70%);
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3), inset 0 2px 4px rgba(255,255,255,0.3);
+    z-index: 3;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  &__seal--broken {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.6);
+  }
+
+  &--opened {
+    .envelope__flap {
+      transform: rotateX(-160deg);
+    }
+  }
+
+  &__env-image {
+    max-width: 300px;
+    max-height: auto;
+  }
+
+  &__env-image--opened {
+      transform: rotateX(-20deg) rotateZ(20deg) scale(1.2);
+  }
+}

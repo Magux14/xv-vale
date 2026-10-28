@@ -1,12 +1,12 @@
 import { ArrowDown, CalendarPlus, Church, Crown, Heart, Music2, PartyPopper, Shirt, Sparkles, Utensils, Wine } from 'lucide-react'
 import { invitationData as event } from '../../data/invitation-data.js'
 import { createCalendarEvent, getEventDateLabels } from '../../utils/event-utils.js'
+import { useEffect } from 'react';
 import Countdown from '../countdown/countdown.jsx'
 import EventLocation from '../event-location/event-location.jsx'
 import InvitationSection from '../invitation-section/invitation-section.jsx'
-import MusicPlayer from '../music-player/music-player.jsx'
 import RsvpDialog from '../rsvp-dialog/rsvp-dialog.jsx'
-import './invitation.scss'
+import './invitation.scss';
 
 const scheduleIcons = { church: Church, glass: Wine, music: Music2, dinner: Utensils, heart: Heart, dance: PartyPopper }
 const dateLabels = getEventDateLabels(event.date, event.timeZone)
@@ -20,9 +20,16 @@ function downloadCalendar() {
   setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
 
-export default function Invitation() {
+export default function Invitation(canScroll) {
+
+  useEffect(() => {
+    if (canScroll) {
+      window.scrollTo(0, 0);
+    }
+  }, [canScroll]);
+
   return (
-    <>
+    <div className={`${!canScroll ? 'not-scroll' : ''}`}>
       <a className="invitation__skip" href="#celebration">Ir a la invitación</a>
       <header className="invitation__hero" style={{ background: '#AD0008' }}>
         <img className="invitation__hero-image" src="./images/hero.png" alt="Valeria con su vestido color rojo y su corona de XV años" fetchPriority="high" width="1599" height="899" />
@@ -146,6 +153,6 @@ export default function Invitation() {
       </main>
 
       <footer className="invitation__footer"><span className="invitation__footer-name">{event.name}</span><Heart size={13} strokeWidth={1} aria-hidden="true" /><p>{dateLabels.day} · {dateLabels.numericMonth} · {dateLabels.year}</p></footer>
-    </>
+    </div>
   )
 }

@@ -1,15 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/global.scss'
-import Invitation from './components/invitation/invitation.jsx'
+import Home from './pages/Home'
 
 createRoot(document.getElementById('root')).render(
 
-  <div className="global-container">
-    <StrictMode>
-      <div className="global-container__content">
-        <Invitation />
-      </div>
-    </StrictMode>,
-  </div>
+  <StrictMode>
+    <Home />
+  </StrictMode>,
 )
