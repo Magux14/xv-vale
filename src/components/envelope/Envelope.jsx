@@ -8,6 +8,8 @@ export const Envelope = ({ setCanScroll, hasSound }) => {
   const audioEnvelopeRef = useRef(null);
   const audioBackgroundRef = useRef(null);
 
+  const defaultVolume = 0.5;
+
   // No cargamos audio aún — Safari requiere interacción del usuario primero
   useEffect(() => {
     const env = new Audio('./sounds/opening-envelope.mp4');
@@ -43,7 +45,7 @@ export const Envelope = ({ setCanScroll, hasSound }) => {
         try {
           // Safari solo respeta el volumen/mute si se hace dentro del mismo click
           audioBackgroundRef.current.muted = !hasSound;
-          audioBackgroundRef.current.volume = hasSound ? 0.5 : 0;
+          audioBackgroundRef.current.volume = hasSound ? defaultVolume : 0;
           audioBackgroundRef.current.loop = true;
           await audioBackgroundRef.current.play();
         } catch (e) {
@@ -60,7 +62,7 @@ export const Envelope = ({ setCanScroll, hasSound }) => {
     if (audioBackgroundRef.current) {
       const bg = audioBackgroundRef.current;
       bg.muted = !hasSound;
-      bg.volume = hasSound ? 0.2 : 0;
+      bg.volume = hasSound ? defaultVolume : 0;
     }
   }, [hasSound]);
 

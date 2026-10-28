@@ -1,7 +1,7 @@
 import { ArrowDown, CalendarPlus, Church, Crown, Heart, Music2, PartyPopper, Shirt, Sparkles, Utensils, Wine } from 'lucide-react'
 import { invitationData as event } from '../../data/invitation-data.js'
 import { createCalendarEvent, getEventDateLabels } from '../../utils/event-utils.js'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Countdown from '../countdown/countdown.jsx'
 import EventLocation from '../event-location/event-location.jsx'
 import InvitationSection from '../invitation-section/invitation-section.jsx'
@@ -22,9 +22,11 @@ function downloadCalendar() {
 
 export default function Invitation(canScroll) {
 
+  const [scrollApplied, setScrollApplied] = useState(false);
   useEffect(() => {
-    if (canScroll) {
+    if (canScroll && !scrollApplied) {
       window.scrollTo(0, 0);
+      setScrollApplied(true);
     }
   }, [canScroll]);
 

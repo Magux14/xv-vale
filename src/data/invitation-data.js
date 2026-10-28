@@ -4,7 +4,7 @@ export const invitationData = {
   date: '2027-01-16T15:30:00-06:00',
   endDate: '2027-01-17T02:00:00-06:00',
   timeZone: 'America/Mexico_City',
-  confirmationDeadline: '1 de diciembre del 2026',
+  confirmationDeadline: '13 de diciembre del 2026',
   message: 'Doy gracias a Dios por estos XV años y por tener a personas como ustedes en mi camino.',
   parents: ['Rodrigo Arellano Nava', 'María Fernanda Vivar Hernández'],
   godparents: ['Mariana Hernández Estrada'],
